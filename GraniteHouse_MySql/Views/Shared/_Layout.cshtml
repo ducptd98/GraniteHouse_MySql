@@ -1,0 +1,124 @@
+﻿@using Microsoft.AspNetCore.Http
+@using GraniteHouse_MySQL.Extensions
+@using GraniteHouse_MySQL.Utility
+
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GraniteHouse_MySQL</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/jquery-ui.css" />
+        <link rel="stylesheet" href="~/css/jquery.timepicker.css" />
+        <script src="https://kit.fontawesome.com/48bb692534.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <script src="https://kit.fontawesome.com/48bb692534.js"></script>
+        <link rel="stylesheet" href="~/css/jquery-ui.css" />
+        <link rel="stylesheet" href="~/css/jquery.timepicker.css" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+            <a class="navbar-brand" href="#">Granite House</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Index">Home</a></li>
+                    @if (User.IsInRole(SD.SuperAdminEndUser))
+                    {
+                        <li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="ProductTypes" asp-action="Index">Product Types</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="SpecialTags" asp-action="Index">Special Tags</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Products" asp-action="Index">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="AdminUsers" asp-action="Index">Admin Users</a></li>
+                    }
+                    @if (User.IsInRole(SD.SuperAdminEndUser)|| User.IsInRole(SD.AdminEndUser))
+                    {
+                        <li class="nav-item"><a class="nav-link" asp-area="Admin" asp-controller="Appointments" asp-action="Index">Appointments</a></li>
+                    }
+                    @if (HttpContextAccessor.HttpContext.Session.Get<List<int>>("ssShoppingCart") != null)
+                    {
+                        <li style="color: white">
+                            <a asp-area="Customer" asp-controller="ShoppingCart" asp-action="Index" class="nav-link">
+                                <i class="fas fa-shopping-cart"></i> &nbsp;
+                                @{
+                                    var count = HttpContextAccessor.HttpContext.Session.Get<List<int>>("ssShoppingCart").Count;
+                                }
+                                (@count)
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li style="color: white">
+                            <a asp-area="Customer" asp-controller="ShoppingCart" asp-action="Index" class="nav-link">
+                                <i class="fas fa-shopping-cart"></i> &nbsp;
+
+                                (0)
+                            </a>
+                        </li>
+                    }
+                </ul>
+
+            </div>
+            <div>
+                <partial name="_LoginPartial" />
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - GraniteHouse_MySQL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/jquery-ui.js" asp-append-version="true"></script>
+        <script src="~/js/jquery.timepicker.js" asp-append-version="true"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-ui.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.timepicker.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
