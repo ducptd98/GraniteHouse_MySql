@@ -18,10 +18,11 @@ namespace GraniteHouse_MySQL.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly UserManager<IdentityUser> _userManager;
+
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -86,15 +87,6 @@ namespace GraniteHouse_MySQL.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
 
-                    if (!await _roleManager.RoleExistsAsync(SD.AdminEndUser))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(SD.AdminEndUser));
-                    }
-
-                    if (!await _roleManager.RoleExistsAsync(SD.SuperAdminEndUser))
-                    {
-                        await _roleManager.CreateAsync(new IdentityRole(SD.SuperAdminEndUser));
-                    }
 
                     if (Input.IsSuperAdmin)
                     {

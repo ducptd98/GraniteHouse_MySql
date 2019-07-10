@@ -1,5 +1,6 @@
 ﻿
 using System;
+using GraniteHouse.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -42,6 +43,8 @@ namespace GraniteHouse_MySQL
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultUI().AddDefaultTokenProviders();
 
+            services.AddScoped<IDbInitializer, DbInitializer>();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             //services.AddDistributedMemoryCache();
             services.AddSession(options =>
@@ -52,7 +55,7 @@ namespace GraniteHouse_MySQL
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IDbInitializer dbInitializer)
         {
             if (env.IsDevelopment())
             {
@@ -70,6 +73,7 @@ namespace GraniteHouse_MySQL
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
+            dbInitializer.Initialize();
             app.UseAuthentication();
             app.UseSession();
             app.UseMvc(routes =>

@@ -5,7 +5,6 @@ D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\bin\Debug\netcoreapp2.2\Grani
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\bin\Debug\netcoreapp2.2\GraniteHouse_MySQL.pdb
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\bin\Debug\netcoreapp2.2\GraniteHouse_MySQL.Views.dll
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\bin\Debug\netcoreapp2.2\GraniteHouse_MySQL.Views.pdb
-D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\GraniteHouse_MySQL.csprojAssemblyReference.cache
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\GraniteHouse_MySQL.csproj.CoreCompileInputs.cache
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\GraniteHouse_MySQL.RazorAssemblyInfo.cache
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\GraniteHouse_MySQL.RazorAssemblyInfo.cs
@@ -92,3 +91,8 @@ D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AdminUsers\Edit.g.cshtml.cs
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\AdminUsers\Delete.g.cshtml.cs
 D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Appointments\Index.g.cshtml.cs
+D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Appointments\Edit.g.cshtml.cs
+D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Appointments\Details.g.cshtml.cs
+D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Appointments\Delete.g.cshtml.cs
+D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Components\UserName\Default.g.cshtml.cs
+D:\Study\Visual Project\ASP.NET\GraniteHouse_MySQL\obj\Debug\netcoreapp2.2\GraniteHouse_MySQL.csprojAssemblyReference.cache

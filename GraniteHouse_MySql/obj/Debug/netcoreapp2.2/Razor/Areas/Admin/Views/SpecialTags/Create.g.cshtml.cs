@@ -24,7 +24,7 @@ using GraniteHouse_MySQL.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"88c4a600e815bb20030040f4f81f95d4238663aa", @"/Areas/Admin/Views/SpecialTags/Create.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b507201c8a5a55bca075824d5a156c0dfcc7f2f", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66d582f5e19e89a3a1401bc0bf4cb34c3475b56c", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_SpecialTags_Create : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<GraniteHouse_MySQL.Models.SpecialTags>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("text-danger"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

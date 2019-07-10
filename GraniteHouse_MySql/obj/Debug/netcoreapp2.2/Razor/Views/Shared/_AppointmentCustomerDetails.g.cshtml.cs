@@ -24,7 +24,7 @@ using GraniteHouse_MySQL.Models;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0eaedfa7c620a9e90beecf144a567091b6c34087", @"/Views/Shared/_AppointmentCustomerDetails.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6b507201c8a5a55bca075824d5a156c0dfcc7f2f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"66d582f5e19e89a3a1401bc0bf4cb34c3475b56c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__AppointmentCustomerDetails : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<GraniteHouse_MySQL.Models.Appointments>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

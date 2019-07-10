@@ -8,6 +8,6 @@ namespace GraniteHouse_MySQL.Models.ViewModel
     public class AppointmentViewModel
     {
         public List<Appointments> Appointments { get; set; }
-        
+        public PagingInfo PagingInfo { get; set; }
     }
 }
